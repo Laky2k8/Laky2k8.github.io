@@ -1,16 +1,13 @@
 <p>LAKYTECH L-1000 (C) 1987 ALL RIGHTS RESERVED</p>
 <br/>
-<br/>
 <p>CPU OK</p>
 <p>RAM OK</p>
 <p>ROM OK</p>
-<br/>
 <br/>
 <p>system ready</br>
 
 <span id="a">C:\</span> cd os\site
 <span id="a">C:\os\site</span>laky2k8.exe<br/><br/>
-<br/><br/>
  ___       ________  ___  __        ___    ___  _______  ___  __    ________     
 |\  \     |\   __  \|\  \|\  \     |\  \  /  /|/  ___  \|\  \|\  \ |\   __  \    
 \ \  \    \ \  \|\  \ \  \/  /|_   \ \  \/  / /__/|_/  /\ \  \/  /|\ \  \|\  \   
