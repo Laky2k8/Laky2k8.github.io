@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../w3.css">
+    <title>Fizika Tábor Centrum - Időjárás</title>
+</head>
+<body class="bg">
+    <div class="w3-container " style="text-align: center; margin:auto;">
+        <a class="w3-button w3-yellow" href="../index.html" style="position: fixed; left: 0px; top: 0px;">Vissza</a>
+        <h1>Letölthetők</h1>
+
+        <img src="mc.webp" onclick="document.getElementById('mc').style='display:block; transition: .5s ease;'">
+        <img src="stardew.png" onclick="document.getElementById('stardew').style='display:block; transition: .5s ease;'"> 
+    </div>
+
+
+    <div id="mc" class="w3-modal modal" style="z-index: 9999;">
+        <div class="w3-modal-content" style="z-index: 9999;">
+          <header class="w3-container w3-green" style="z-index: 9999; background: linear-gradient(180deg, rgba(0,177,255,1) 0%, rgba(91,255,88,1) 100%);"> 
+            <span onclick="document.getElementById('mc').style='display:none; transition: .5s ease;'"
+            class="w3-button w3-display-topright" style="background-color:transparent">&times;</span>
+            <h2>Minecraft</h2>
+          </header>
+          <div class="w3-container">
+            <p>A Minecraft egy nyitott világú sandbox videojáték, amelyet eredetileg Markus "Notch" Persson készített.</br>
+            <p>Ez a játék telefonos változata. Verzió: <em>1.18.10</em></br>
+            <a class="w3-button w3-green" href="mc.apk" style="margin-top: 10px; margin-bottom:10px;" download="Minecraft.apk">Letöltés</a>
+          </div>
+          <footer class="w3-container w3-teal">
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <div id="stardew" class="w3-modal modal" style="z-index: 9999;">
+        <div class="w3-modal-content" style="z-index: 9999;">
+          <header class="w3-container w3-green" style="z-index: 9999; background: linear-gradient(180deg, rgba(22,7,68,1) 0%, rgba(5,118,224,1) 64%, rgba(86,208,238,1) 100%);"> 
+            <span onclick="document.getElementById('stardew').style='display:none; transition: .5s ease;'"
+            class="w3-button w3-display-topright" style="background-color:transparent">&times;</span>
+            <h2>Stardew Valley</h2>
+          </header>
+          <div class="w3-container">
+            <p>A Stardew Valley egy Eric "ConcernedApe" Barone által fejlesztett RPG. A játékosok egy karakter szerepét veszik át, aki átveszi nagyapja farmját a Stardew Valley nevű helyen.</br>
+            <p>Ez a játék telefonos változata.</br>
+            <a class="w3-button w3-green" href="Stardew.apk" style="margin-top: 10px; margin-bottom:10px;" download="StardewValley.apk">Letöltés</a>
+          </div>
+          <footer class="w3-container w3-teal">
+          </footer>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

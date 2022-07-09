@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../w3.css">
+    <title>Fizika Tábor Centrum - Időjárás</title>
+</head>
+<body class="bg">
+    <div class="w3-container " style="text-align: center; margin:auto;">
+        <a class="w3-button w3-yellow" href="../index.html" style="position: fixed; left: 0px; top: 0px;">Vissza</a>
+        <h1>Időjárás</h1>
+
+        <iframe src='http://beepulo.idokep.hu/futar/Pusztafalu'  loading="lazy" scrolling='no' style='width:300px;height:260px;border:none;'></iframe>
+
+        <video width="320" height="240" autoplay muted loop>
+            <source src="https://www.idokep.hu/radar/radar.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+
+
+        <a class="weatherwidget-io" href="https://forecast7.com/hu/48d5421d49/pusztafalu/" data-label_1="PUSZTAFALU" data-label_2="IDŐJÁRÁS" data-font="Roboto" data-icons="Climacons Animated" data-days="5" data-theme="weather_one" style="max-width:500px; margin:auto;">PUSZTAFALU IDŐJÁRÁS</a>
+        <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+
+        <!-- ournet.hu Weather Widget -->
+        <iframe src="http://idojaras.ournet.hu/widget2/widget_frame?id=716286&days=5&color=68a7d4&pos=v&w=250&header=true"  loading="lazy" scrolling="no" frameborder="0" style="margin:auto; overflow:hidden;height:220px;max-width:400px;"></iframe>
+        <noscript><a href="http://idojaras.ournet.hu">ournet.hu</a></noscript>
+    </div>
+</body>
+</html>

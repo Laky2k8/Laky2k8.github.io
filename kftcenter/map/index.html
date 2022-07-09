@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../map.css">
+    <link rel="stylesheet" href="../w3.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+    
+
+    <title>Fizika Tábor Centrum - Térkép</title>
+</head>
+<body class="bg">
+    <div class="w3-container w3-center">
+        <a class="w3-button w3-yellow" href="../index.html" style="position: fixed; left: 0px; top: 0px;">Vissza</a>
+        <h1>Térkép</h1>
+        <div id="map" style="max-width: 500px;  max-height:500px; width:80vw; height:80vw; margin:auto;"></div>
+
+        <script src="map.js"></script>
+
+        <h3>Androidos offline térkép programok:</h3>
+        <ul>
+            <li><a onclick="document.getElementById('osmand').style.display='block'" href="#">OsmAnd</a></li>
+            <li><a onclick="document.getElementById('organicMaps').style.display='block'" href="#">Organic Maps</a></li>
+        </ul>
+
+        <div id="osmand" class="w3-modal modal" style="z-index: 9999;">
+            <div class="w3-modal-content" style="z-index: 9999;">
+              <header class="w3-container w3-teal" style="z-index: 9999;"> 
+                <span onclick="document.getElementById('osmand').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h2>OsmAnd — Térkép & GPS offline</h2>
+              </header>
+              <div class="w3-container">
+                <a class="w3-button w3-green" href="https://play.google.com/store/apps/details?id=net.osmand" style="margin-top: 10px; margin-bottom:10px;">Google Play</a>
+                <a class="w3-button w3-green" href="https://f-droid.org/en/packages/net.osmand.plus/" style="margin-top: 10px; margin-bottom:10px;">F-Droid (FossDroid)</a>
+              </div>
+              <footer class="w3-container w3-teal">
+              </footer>
+            </div>
+          </div>
+        </div>
+
+        <div id="organicMaps" class="w3-modal modal" style="z-index: 9999;">
+          <div class="w3-modal-content" style="z-index: 9999;">
+            <header class="w3-container w3-teal" style="z-index: 9999;"> 
+              <span onclick="document.getElementById('organicMaps').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Organic Maps — Offline térképek Túrázásra és Kerékpározásra</h2>
+            </header>
+            <div class="w3-container">
+              <a class="w3-button w3-green" href="https://play.google.com/store/apps/details?id=app.organicmaps" style="margin-top: 10px; margin-bottom:10px;">Google Play</a>
+              <a class="w3-button w3-green" href="https://f-droid.org/packages/app.organicmaps/" style="margin-top: 10px; margin-bottom:10px;">F-Droid (FossDroid)</a>
+            </div>
+            <footer class="w3-container w3-teal">
+            </footer>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+</body>
+</html>

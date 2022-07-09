@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="w3.css">
+    <title>Fizika Tábor Centrum</title>
+    <script src="script.js"></script>
+</head>
+<body class="bg" onload="initDateAndTime(); getAPIresp('https://free.currconv.com/api/v7/convert?q=EUR_HUF&compact=ultra&apiKey=e4bd48b6f7a6ac94c12e ')">
+    <div class="w3-container" style="text-align: center;">
+
+        <h1 class="headerT">Fizika Tábor Infó Centrum</h1>
+
+        <div class="w3-bar">
+            <a class="w3-button w3-yellow" href="weather/">Időjárás</a>
+            <a class="w3-button w3-yellow" href="map/">Térkép</a>
+            <a class="w3-button w3-yellow" href="downloadables/">Letölthetők</a>
+        </div>
+        
+        <p>Helló kedves látogató!</p>
+
+        <p>Ez az oldal kifejezetten a Fizika Táborosoknak készült.</br>
+        <p>Már sokszor észrevettem, hogy olyan dolgokat mint: <br>
+        <ul>
+            <li>Időjárás előrejelzés</li>
+            <li>Térkép</li>
+            <li>Stb.</li>
+        </ul>
+        <p>Elég nehéz volt megtekinteni a szűkös mobilnet keretekkel, mivel minden dologért külön oldalakra kellett elnavigálni.<br>
+        <p>Ekkor jött az ötlet, hogy csináljak egy oldalt, ahol minden fontos információt egy helyen lehet elérni. Ez lenne az az oldal 😄<br>
+        <br>
+        <p>Kellemes használatot!</p>
+
+        <h1 id="date"></h1>
+        <h1 id="clock"></h1>
+
+        <h1 id="eur"></h1>
+
+    </div>
+</body>
+</html>
