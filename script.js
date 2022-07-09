@@ -58,9 +58,7 @@ var Typer = {
 
       $('#console').html(text.replace(rtn, '<br/>'));
       window.scrollBy(0, 50);
-      
-      $('#console').html(text.replace(rtn, '<cls>'));
-      $('#console').contents().remove();
+     
     }
 
     if (key.preventDefault && key.keyCode != 122) {
