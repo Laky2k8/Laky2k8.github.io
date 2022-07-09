@@ -58,6 +58,9 @@ var Typer = {
 
       $('#console').html(text.replace(rtn, '<br/>'));
       window.scrollBy(0, 50);
+      
+      $('#console').html(text.replace(rtn, '<cls>'));
+      $('#console').contents().filter((_, el) => el.nodeType === 3).remove();
     }
 
     if (key.preventDefault && key.keyCode != 122) {
