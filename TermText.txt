@@ -1,12 +1,26 @@
-<span id="a">code@nerve</span>:<span id="b">~</span><span id="c">$</span> cd CodeNerve/About_Us
-<span id="a">coder@nerve</span>:<span id="b">~</span><span id="c">$</span> catcodenerve.txt<br/><br/>
+<p>LAKYTECH L-1000 (C) 1987 ALL RIGHTS RESERVED</p>
+<br/>
+<br/>
+<p>CPU OK</p>
+<p>RAM OK</p>
+<p>ROM OK</p>
+<br/>
+<br/>
+<p>system ready</br>
 
-Test commencing in...
-
-3
-
-2
-
-1
-
-<cls>
+<span id="a">C:\</span> cd os\site
+<span id="a">C:\os\site</span>laky2k8.exe<br/><br/>
+<br/><br/>
+ ___       ________  ___  __        ___    ___  _______  ___  __    ________     
+|\  \     |\   __  \|\  \|\  \     |\  \  /  /|/  ___  \|\  \|\  \ |\   __  \    
+\ \  \    \ \  \|\  \ \  \/  /|_   \ \  \/  / /__/|_/  /\ \  \/  /|\ \  \|\  \   
+ \ \  \    \ \   __  \ \   ___  \   \ \    / /|__|//  / /\ \   ___  \ \   __  \  
+  \ \  \____\ \  \ \  \ \  \\ \  \   \/  /  /     /  /_/__\ \  \\ \  \ \  \|\  \ 
+   \ \_______\ \__\ \__\ \__\\ \__\__/  / /      |\________\ \__\\ \__\ \_______\
+    \|_______|\|__|\|__|\|__| \|__|\___/ /        \|_______|\|__| \|__|\|_______|
+                                  \|___|/                                        
+                                                                                 
+                                                                                 
+Welcome to my site. </br>
+Here are some stuff you can see: </br>
+  - <a href="kftcenter">Kreatív Fizika Tábor Center</a>
