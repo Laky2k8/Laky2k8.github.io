@@ -21,3 +21,4 @@
 Welcome to my site. </br>
 Here are some stuff you can see: </br>
   - <a href="kftcenter">Kreatív Fizika Tábor Center</a>
+  - <a href="vrplaces">VRPlaces</a>
