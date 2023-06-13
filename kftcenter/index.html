@@ -1,44 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="w3.css">
-    <title>Fizika Tábor Centrum</title>
-    <script src="script.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="navbar.css">
+	<script src="script.js"></script>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+	integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+	crossorigin=""/>
+ 
+	 <!-- Make sure you put this AFTER Leaflet's CSS -->
+	 <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+	 integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+	 crossorigin=""></script>
 </head>
-<body class="bg" onload="initDateAndTime(); getAPIresp('https://free.currconv.com/api/v7/convert?q=EUR_HUF&compact=ultra&apiKey=e4bd48b6f7a6ac94c12e ')">
-    <div class="w3-container" style="text-align: center;">
+<body onload="init()">
+	<h1 class="heading">Fizika Tábor Infó Centrum</h1>
 
-        <h1 class="headerT">Fizika Tábor Infó Centrum</h1>
+	<div class="nav">
+		<ul class="navbar">
+			<li class="navitem"><a class="navButton" onclick="showDialog('weather')">Időjárás</a>
+			<li class="navitem"><a class="navButton" onclick="showDialog('mapDg')">Térkép</a>
+			<li class="navitem"><a class="navButton" onclick="showDialog('downloadables')">Letölthető cuccok</a>
+		</ul>
+	</div>
 
-        <div class="w3-bar">
-            <a class="w3-button w3-yellow" href="weather/">Időjárás</a>
-            <a class="w3-button w3-yellow" href="map/">Térkép</a>
-            <a class="w3-button w3-yellow" href="downloadables/">Letölthetők</a>
-        </div>
-        
-        <p>Helló kedves látogató!</p>
+	<div class="mainSection">
+		<h3>Szervusz!</h3> 
+		<p>
+			Ez az oldal kifejezetten a Kreatív Fizika Tábor résztvevőinek készült. <br>
+			Itt egy sor hasznos infót elérhettek: időjárás és előrejelzés, hasznos letölthető cuccok, és még egy térkép is! 🤗<br>
+		</p>
+		<br>
+		<br>
+		<p>
+			Ha már itt vagy, csatlakozz a félhivatalos Discord szerverünkhöz is
+			<a href="http://dsc.gg/kft-dc" class="dcLink">itt!</a>
+		</p>
+	</div>
 
-        <p>Ez az oldal kifejezetten a Fizika Táborosoknak készült.</br>
-        <p>Már sokszor észrevettem, hogy olyan dolgokat mint: <br>
-        <ul>
-            <li>Időjárás előrejelzés</li>
-            <li>Térkép</li>
-            <li>Stb.</li>
-        </ul>
-        <p>Elég nehéz volt megtekinteni a szűkös mobilnet keretekkel, mivel minden dologért külön oldalakra kellett elnavigálni.<br>
-        <p>Ekkor jött az ötlet, hogy csináljak egy oldalt, ahol minden fontos információt egy helyen lehet elérni. Ez lenne az az oldal 😄<br>
-        <br>
-        <p>Kellemes használatot!</p>
-
+	<div class="basicInfo">
         <h1 id="date"></h1>
         <h1 id="clock"></h1>
 
         <h1 id="eur"></h1>
+	</div>
 
-    </div>
+	<dialog id="weather">
+        <h2>Időjárás</h2>
+
+
+        <iframe src='https://beepulo.idokep.hu/futar/Pusztafalu'  loading="lazy" scrolling='no' style='width:300px;height:260px;border:none;'></iframe>
+
+        <video width="320" height="240" autoplay muted loop>
+            <source src="https://www.idokep.hu/radar/radar.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <a class="weatherwidget-io" href="https://forecast7.com/hu/48d5421d49/pusztafalu/" data-label_1="PUSZTAFALU" data-label_2="IDŐJÁRÁS" data-font="Roboto" data-icons="Climacons Animated" data-days="5" data-theme="weather_one" style="max-width:500px; margin:auto;">PUSZTAFALU IDŐJÁRÁS</a>
+        <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+
+        <!-- ournet.hu Weather Widget -->
+        <iframe src="https://idojaras.ournet.hu/widget2/widget_frame?id=716286&days=5&color=68a7d4&pos=v&w=250&header=true"  loading="lazy" scrolling="no" frameborder="0" style="margin:auto; overflow:hidden;height:220px;max-width:400px;" class="ournet"></iframe>
+        <noscript><a href="https://idojaras.ournet.hu">ournet.hu</a></noscript>
+
+
+		<button onclick="closeDialog('weather')" class="closeBtn">&times;</button>
+	</dialog>
+
+	<dialog id="mapDg">
+		<h2>Térkép</h2>
+		
+		<div id="map" style="max-width: 500px; max-height: 500px; width: 80vw; height: 80vw; margin: auto; position: relative; outline: none;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0"></div>
+		<script src="map.js"></script>
+        
+
+		<button onclick="closeDialog('mapDg')" class="closeBtn">&times;</button>
+	</dialog>
+	<dialog id="downloadables">
+		<h2>Letölthető cuccok</h2>
+		<br>
+		<p>Itt található pár letölthető hasznos cucc. Válogass kedvedre!</p>
+		<ul>
+			<li><a href="https://ln5.sync.com/dl/a117cfeb0/abtq4g8z-jzm3z3bg-mc4eju3q-v5976rkw" class="dcLink">Minecraft</a></li>
+			<li><a href="https://ln5.sync.com/dl/eb2d3a580/kfhj5qhn-8eqp52kw-dbb5ssdf-suwt53h4" class="dcLink">Stardew Valley</a></li>
+		</ul>
+		
+		<button onclick="closeDialog('downloadables')" class="closeBtn">&times;</button>
+	</dialog>
+
+
 </body>
 </html>

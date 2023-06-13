@@ -1,19 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
-.bg 
+@media only screen and (min-width: 768px) {
+  .ournet
+  {
+    display: block;
+  }
+
+  #weather
+  {
+    top: 8%;
+  }
+
+  #mapDg
+  {
+    top: 20%;
+  }
+
+  #downloadables
+  {
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+
+  .ournet
+  {
+    display: none;
+  }
+
+  #weather
+  {
+    top:0%;
+  }
+
+  #mapDg
+  {
+    top:20%;
+  }
+
+  #downloadables
+  {
+    top:30%;
+  }
+}
+body 
 {
     background: url("bg.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+    font-family: 'Roboto Slab', serif;
+}
 
 
 
 body, html 
 {
     height: 100%;
-    font-family: 'Rubik', sans-serif;
     text-align: center;
+    overflow: hidden;
+}
+
+.heading
+{
+  font-family: 'Black Ops One', cursive;
+}
+
+#date
+{
+  color: red;
+}
+
+#clock
+{
+  color: lime;
+}
+
+#eur
+{
+  color: rgb(0, 195, 255);
+}
+
+.dcLink, .dcLink:hover, .dcLink:active, .dcLink:visited{
+  color: aqua
+}
+
+dialog
+{
+  background: rgba(145, 145, 145, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  border: 1px solid rgb(80, 80, 80);
+}
+
+.closeBtn
+{
+  position:fixed;
+  left:0;
+  top:0;
+  padding:20px;
+  font-size: 35px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  transition-duration: .2s;
+}
+
+.closeBtn:hover
+{
+  color:red;
+  transition-duration: .2s;
+}
+
+.closeBtn:active
+{
+  color:rgb(146, 0, 0);
+  transition-duration: .2s;
 }

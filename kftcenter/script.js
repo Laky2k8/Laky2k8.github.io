@@ -43,5 +43,32 @@ function getAPIresp(url)
 function parseResponse(resp)
 {
     const obj = resp;
-    document.getElementById("eur").innerHTML = "A jelenlegi Euró-Forint árfolyam: " + obj.EUR_HUF + " Ft";
+    console.log(obj.rates.HUF);
+    document.getElementById("eur").innerHTML = "A jelenlegi Euró-Forint árfolyam: " + obj.rates.HUF + " Ft";
 }
+
+function randomBG()
+{
+    var images = ["bg/bg.png", "bg/bg2.png", "bg/bg3.png","bg/bg4.png","bg/bg5.png"];
+    document.body.style.backgroundImage = "url(" + images[Math.floor(Math.random() * images.length)] + ")";
+}
+
+function init()
+{
+    randomBG();
+    initDateAndTime();
+    getAPIresp('https://api.exchangerate-api.com/v4/latest/eur');
+}
+
+function showDialog(dialogName) { 
+    const dialog = document.getElementById(dialogName); 
+    dialog.show();
+    const mapDiv = document.getElementById("map");
+    const map = L.map(mapDiv);
+    map.invalidateSize();
+  } 
+  
+  function closeDialog(dialogName) {
+    const dialog = document.getElementById(dialogName); 
+    dialog.close(); 
+  } 
